@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import json
+import os
 
 # Function to search for recipes using the Edamam API
 def recipe_search(ingredient, app_id, app_key):
@@ -37,8 +38,8 @@ def main():
     ingredient = st.text_input("Enter an ingredient", "chicken")
 
     # API Credentials (these should be your own App ID and Key)
-    app_id = '9abc9f35'
-    app_key = '69f933f2cd59a612e81884cd1478f3da'
+    app_id = os.getenv(9abc9f35)
+    app_key = os.getenv(69f933f2cd59a612e81884cd1478f3da)
 
     # Input for low-calorie preference
     low_calorie = st.checkbox("Low-calorie recipes (≤ 500 calories)")
